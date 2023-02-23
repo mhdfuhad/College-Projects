@@ -1,0 +1,12 @@
+# dev tools, config
+.vscode/
+.git/
+.github/
+.git*
+*.md
+
+# ignore the dependencies
+node_modules/
+
+# ignore the build
+build/

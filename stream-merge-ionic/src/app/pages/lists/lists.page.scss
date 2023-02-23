@@ -1,0 +1,22 @@
+.listGrid {
+  margin-top: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 3vh;
+}
+
+.buttonEdit {
+  margin-bottom: 1vh;
+  margin-right: 1vw;
+}
+
+.toolBar {
+  --background: --ion-color-dark;
+}
+
+.noItemsText {
+  text-align: center;
+  font-size: 1.2rem;
+  color: grey;
+  margin-top: 35vh;
+}

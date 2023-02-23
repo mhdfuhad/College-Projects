@@ -1,0 +1,78 @@
+<ion-content>
+  <div class="topText">
+    <h2 class="title">Welcome</h2>
+    <h4 class="subtitle">
+      We'll need some details before you can get started!
+    </h4>
+  </div>
+
+  <div class="inputDetails">
+    <ion-item lines="full" mode="md">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input
+        clearInput
+        inputmode="text"
+        (ionChange)="setFirstName($event)"
+      ></ion-input>
+    </ion-item>
+    <p class="underInput smallText">
+      This data is permanent and cannot be changed later
+    </p>
+
+    <ion-item lines="full" mode="md">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input
+        clearInput
+        inputmode="text"
+        (ionChange)="setLastName($event)"
+      ></ion-input>
+    </ion-item>
+    <p class="underInputSecond smallText">
+      This data is permanent and cannot be changed later
+    </p>
+
+    <ion-item lines="full">
+      <ion-label>Select Country</ion-label>
+      <ion-select
+        [interfaceOptions]="customActionSheetOptions"
+        interface="action-sheet"
+        cancel-text="Cancel"
+        (ionChange)="setCountry($event)"
+      >
+        <ion-select-option
+          *ngFor="let country of countries"
+          value="{{country}}"
+        >
+          {{country}}</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+    <p class="underInputSecond smallText">
+      This data is permanent and cannot be changed later
+    </p>
+
+    <ion-item button (click)="addSubscription()" lines="full">
+      <ion-label> Add Your Subscriptions </ion-label>
+    </ion-item>
+  </div>
+
+  <div class="ion-margin">
+    <ion-chip *ngFor="let subscription of subscriptions"
+      >{{subscription}}
+      <ion-icon
+        name="close-circle"
+        (click)="removeSubscription(subscription)"
+      ></ion-icon>
+    </ion-chip>
+  </div>
+
+  <ion-button
+    expand="block"
+    color="dark"
+    class="ion-margin-horizontal buttonBottom"
+    (click)="next()"
+    shape="round"
+  >
+    Done?
+  </ion-button>
+</ion-content>

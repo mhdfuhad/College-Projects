@@ -1,0 +1,5 @@
+#dropdown-split-basic::before {
+  color: white;
+  visibility: visible;
+  content: "▼";
+}

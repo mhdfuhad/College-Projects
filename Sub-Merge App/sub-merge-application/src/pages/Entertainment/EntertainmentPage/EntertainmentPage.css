@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap");
+.slick-prev,
+.slick-next {
+  color: #404040;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-prev:active,
+.slick-prev:visited,
+.slick-next:hover,
+.slick-next:focus,
+.slick-next:active,
+.slick-prev:visited {
+  color: #404040;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #404040;
+}

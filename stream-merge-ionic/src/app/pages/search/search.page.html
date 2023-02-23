@@ -1,0 +1,150 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Search </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-searchbar
+    (search)="clickedSearch($event)"
+    showCancelButton="focus"
+  ></ion-searchbar>
+
+  <ion-grid *ngIf="results">
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" fill="outline" color="dark" (click)="sort()">
+          Sort by</ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button id="open-modal" expand="block" fill="outline" color="dark"
+          >Filter by</ion-button
+        >
+        <ion-modal
+          #modal
+          trigger="open-modal"
+          [initialBreakpoint]="0.75"
+          [breakpoints]="[0, 0.75]"
+        >
+          <ng-template>
+            <ion-content class="modalS" scroll-y="false">
+              <ion-row>
+                <ion-col>
+                  <ion-button
+                    fill="clear"
+                    color="dark"
+                    (click)="modal.dismiss()"
+                    >Cancel</ion-button
+                  >
+                </ion-col>
+                <ion-col class="ion-text-center">
+                  <ion-text>
+                    <h3>Filter by</h3>
+                  </ion-text>
+                </ion-col>
+                <ion-col class="ion-text-end">
+                  <ion-button
+                    fill="clear"
+                    color="primary"
+                    (click)="filter(modal)"
+                    >Apply</ion-button
+                  >
+                </ion-col>
+              </ion-row>
+              <div class="filtersDiv">
+                <ion-item lines="full">
+                  <ion-label>Movie only</ion-label>
+                  <ion-toggle [(ngModel)]="movie"></ion-toggle>
+                </ion-item>
+
+                <ion-item lines="full">
+                  <ion-label>Series only</ion-label>
+                  <ion-toggle [(ngModel)]="series"></ion-toggle>
+                </ion-item>
+
+                <ion-item lines="full">
+                  <ion-label>My subscriptions</ion-label>
+                  <ion-toggle [(ngModel)]="mySubscriptions"></ion-toggle>
+                </ion-item>
+
+                <ion-item lines="full">
+                  <ion-label>Rating</ion-label>
+                  <ion-select [(ngModel)]="rating">
+                    <ion-select-option value="">Any</ion-select-option>
+                    <ion-select-option value="1">1+</ion-select-option>
+                    <ion-select-option value="2">2+</ion-select-option>
+                    <ion-select-option value="3">3+</ion-select-option>
+                    <ion-select-option value="4">4+</ion-select-option>
+                    <ion-select-option value="5">5+</ion-select-option>
+                    <ion-select-option value="6">6+</ion-select-option>
+                    <ion-select-option value="7">7+</ion-select-option>
+                    <ion-select-option value="8">8+</ion-select-option>
+                    <ion-select-option value="9">9+</ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item lines="full">
+                  <ion-label>Year</ion-label>
+                  <ion-select [(ngModel)]="year">
+                    <ion-select-option value="">Any</ion-select-option>
+                    <ion-select-option
+                      *ngFor="let year of years"
+                      value="{{year}}"
+                      >{{year}}</ion-select-option
+                    >
+                  </ion-select>
+                </ion-item>
+
+                <ion-item lines="full">
+                  <ion-label>Select subscriptions</ion-label>
+                  <ion-button (click)="filterSubscriptions()" color="dark">
+                    <ion-icon name="add"></ion-icon>
+                  </ion-button>
+                </ion-item>
+
+                <ng-container NgIf="subscriptions.length > 0">
+                  <div class="chipsFilter">
+                    <ion-chip *ngFor="let subscription of subscriptions"
+                      >{{subscription}}</ion-chip
+                    >
+                  </div>
+                </ng-container>
+              </div>
+
+              <ion-row class="ion-margin-top"> </ion-row>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p *ngIf="results" class="ion-no-margin ion-margin-start subtitle">
+    {{count}} results
+  </p>
+
+  <div class="listGrid" *ngIf="results">
+    <ng-container *ngFor="let item of items">
+      <app-card [content]="item"></app-card>
+    </ng-container>
+  </div>
+
+  <ion-text>
+    <h3 class="noResultsText" *ngIf="!results && !loading">
+      Why don't we search for something?
+    </h3>
+    <h3 class="noResultsText" *ngIf="loading">Searching...</h3>
+    <h3
+      class="noResultsText"
+      *ngIf="items.length === 0 && results && loading === false"
+    >
+      No results found
+    </h3>
+  </ion-text>
+</ion-content>

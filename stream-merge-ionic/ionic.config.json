@@ -1,0 +1,7 @@
+{
+  "name": "Stream Merge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,143 @@
+.AddPaymentContainer {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.AddPaymentContainer > span {
+  font-size: 14px;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0ch;
+  text-transform: none;
+  color: rgb(25, 25, 25);
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.PaymentMethodAddBtnContainer {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: inherit;
+  display: block;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  outline: none !important;
+}
+
+.PaymentMethodAddContainer {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+}
+
+.PaymentMethodItem-1 {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  flex-basis: 100%;
+  grid-area: 2 / 1 / auto / auto;
+}
+
+.Item1 {
+  font-size: 18px;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.04ch;
+  text-transform: none;
+  color: rgb(25, 25, 25);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  font-variant-ligatures: no-common-ligatures;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.PaymentMethodItem-1 .Item1 div {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.PaymentMethodItem-1 .Item1 div .CreditText {
+  font-size: 16px;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0ch;
+  text-transform: none;
+  color: rgb(25, 25, 25);
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.PaymentMethodItem-2 {
+  grid-area: 2 / 2 / auto / auto;
+  flex-shrink: 0;
+  line-height: 0;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.PaymentMethodAddPaypalBtnContainer {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: inherit;
+  display: block;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  outline: none !important;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.PaymentMethodAddPaypalContainer {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+}
+
+.PaymentMethodAddPaypalBtnContainer
+  .PaymentMethodAddPaypalContainer
+  .PaymentMethodItem-1 {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  flex-basis: 100%;
+  grid-area: 2 / 1 / auto / auto;
+}

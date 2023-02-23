@@ -1,0 +1,50 @@
+<ng-container *ngIf="items">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> Lists </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Lists</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-toolbar class="toolBar">
+      <ion-segment value="watchLater" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="watchLater">
+          Watch Later
+        </ion-segment-button>
+        <ion-segment-button value="favorites"> Favorites </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+    <div class="listGrid">
+      <ng-container *ngFor="let item of items">
+        <app-card
+          [content]="item"
+          [edit]="edit"
+          (removeCurrent)="removeCurrentHandler($event)"
+        ></app-card>
+      </ng-container>
+    </div>
+
+    <ion-text *ngIf="items.length === 0">
+      <h3 class="noItemsText">No items saved to list</h3>
+    </ion-text>
+
+    <ion-fab
+      *ngIf="items.length > 0"
+      slot="fixed"
+      vertical="bottom"
+      horizontal="end"
+    >
+      <ion-fab-button (click)="setEdit()" class="buttonEdit"
+        ><ion-icon name="close-outline" *ngIf="edit"></ion-icon>
+        <ion-icon name="create-outline" *ngIf="!edit"></ion-icon
+      ></ion-fab-button>
+    </ion-fab>
+  </ion-content>
+</ng-container>

@@ -1,0 +1,51 @@
+<ng-container *ngIf="subItems">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> Hello {{userName}} </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense" class="topHeader">
+      <ion-toolbar>
+        <ion-title size="large">Hello {{userName}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <div class="ion-margin-top" *ngIf="subscriptions.length > 0">
+      <h2 class="titlesSection">Your Subscriptions</h2>
+      <div class="ion-margin">
+        <ion-chip *ngFor="let subscription of subscriptions"
+          >{{subscription}}</ion-chip
+        >
+      </div>
+    </div>
+
+    <div *ngIf="subscriptions.length > 0">
+      <h2 class="titlesSection">Subscribed Recommendations</h2>
+      <swiper [slidesPerView]="2" [freeMode]="true" class="mySwiper">
+        <ng-template *ngFor="let item of subItems" swiperSlide>
+          <app-card [content]="item"></app-card>
+        </ng-template>
+      </swiper>
+    </div>
+
+    <div class="ion-margin-top">
+      <h2 class="titlesSection">Recommended</h2>
+      <swiper [slidesPerView]="2" [freeMode]="true" class="mySwiper">
+        <ng-template *ngFor="let item of items" swiperSlide>
+          <app-card [content]="item"></app-card>
+        </ng-template>
+      </swiper>
+    </div>
+
+    <div>
+      <h2 class="titlesSection">You might like</h2>
+      <swiper [slidesPerView]="2" [freeMode]="true" class="mySwiper">
+        <ng-template *ngFor="let item of random" swiperSlide>
+          <app-card [content]="item"></app-card>
+        </ng-template>
+      </swiper>
+    </div>
+  </ion-content>
+</ng-container>

@@ -1,0 +1,28 @@
+.conversation:hover {
+  background-color: rgb(237, 229, 229);
+}
+
+.chatOnlineImgContainer {
+  position: relative;
+  margin-right: 15px;
+}
+
+.chatOnlineBadge {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}
+
+.onlineFriendsContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+}
+
+.onlineFriendsContainer::-webkit-scrollbar-thumb {
+  background: rgb(209, 193, 193);
+}

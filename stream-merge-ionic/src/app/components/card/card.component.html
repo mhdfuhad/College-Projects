@@ -1,0 +1,21 @@
+<ion-icon
+  *ngIf="edit"
+  name="close-circle-outline"
+  class="remove"
+  (click)="remove()"
+></ion-icon>
+
+<ion-card
+  class="card"
+  [style.backgroundImage]="'url(' + image + ')'"
+  (click)="cardClicked()"
+>
+  <ion-card-header class="cardText">
+    <ion-card-title class="title"
+      >{{ item.title }} ({{ item.year }})</ion-card-title
+    >
+    <ion-card-subtitle>
+      <ion-badge color="light" class="subtitle">{{ type }}</ion-badge>
+    </ion-card-subtitle>
+  </ion-card-header>
+</ion-card>

@@ -1,0 +1,9 @@
+.groupChatContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+}
+
+.groupChatContainer::-webkit-scrollbar-thumb {
+  background: rgb(209, 193, 193);
+}

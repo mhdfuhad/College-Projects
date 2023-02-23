@@ -1,0 +1,17 @@
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: green;
+  border: 5px solid grey;
+  border-radius: 5px;
+  margin-bottom: 1vh;
+}
+
+.userBox {
+  width: 30%;
+  height: 50%;
+  object-fit: cover;
+  text-align: center;
+  margin: 5vh;
+}

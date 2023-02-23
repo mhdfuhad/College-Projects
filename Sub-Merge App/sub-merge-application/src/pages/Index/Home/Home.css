@@ -1,0 +1,177 @@
+.header {
+  background-color: #13204a;
+  height: 70vh;
+}
+
+.homepage_heading {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3.5em;
+  padding-top: 100px;
+}
+
+.homepage_main_text {
+  text-align: center;
+  color: white;
+  margin-top: 2vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.button_container button {
+  background-color: #5ae34d;
+  color: white;
+  margin: 25px;
+  border-radius: 6px;
+  width: 8vw;
+  height: 7vh;
+}
+.button_container button:hover {
+  background-color: #22c55e;
+}
+
+.main {
+  height: 50vh;
+  width: 40vw;
+  border-radius: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+}
+
+.grid {
+  text-align: center;
+  margin-top: 50vh;
+  align-items: center;
+}
+
+.subscription_content {
+  margin-top: 200px;
+}
+
+.title_left {
+  color: #008000;
+  display: inline-block;
+  background-color: #bcebc4;
+  border-radius: 25px;
+  opacity: 2;
+  font-size: 0.85em;
+  padding: 6px 7px;
+  opacity: 0.8;
+}
+
+.maincontent_title {
+  font-weight: bold;
+  font-size: 4.25em;
+}
+.maincontent_subtitle {
+  color: #13204a;
+  margin-top: 20px;
+}
+
+.create_account_icon {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 1.25em;
+}
+.add_subscriptions_icon {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 1.25em;
+}
+.surf_icon {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 1.25em;
+}
+.stress_free_icon {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 1.25em;
+}
+.subscription_grid {
+  margin-top: 5vh;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.step_name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.step_description {
+  display: inline-block;
+}
+
+.subscription_content_image {
+  width: 15vw;
+  height: 30vh;
+  border-radius: 2px;
+  margin-right: 2vw;
+  float: right;
+}
+
+.title_right {
+  float: right;
+  color: #008000;
+  background-color: #bcebc4;
+  padding: 6px 7px;
+  border-radius: 25px;
+  font-size: 0.85em;
+  margin-right: 29vh;
+  margin-top: 3vh;
+  opacity: 0.8;
+}
+
+.description {
+  margin-right: 3vh;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-left: 10vh;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.middle {
+  margin-left: 10vh;
+}
+
+.detail_content {
+  margin-top: 200px;
+}
+
+.detail_title {
+  color: #008000;
+  background-color: #bcebc4;
+  display: inline-block;
+  font-size: 0.85em;
+  border-radius: 25px;
+  padding: 6px 7px;
+  opacity: 0.8;
+}
+.detail_content_title {
+  font-size: 3em;
+  font-weight: bold;
+}
+.detail_description {
+  color: gray;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.contact_email {
+  font-size: 2em;
+  font-weight: bold;
+}
+.contact_socials {
+  font-size: 2em;
+  font-weight: bold;
+}
