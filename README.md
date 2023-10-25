@@ -11,7 +11,7 @@ Developed two command line-based Object-Oriented Applications, demonstrating the
 
 ## C++ Data Structures and Algorithms
 
-Implemented few data structures using C++ as per requirements of each assignment, provided tester files used a test driven development for the implemententation of data structures. Data structures implemented are:
+Successfully designed and implemented several data structures in C++ to meet the specific requirements outlined in each assignment. For the development process, employed test-driven development, utilizing tester files to rigorously validate and refine the implementation. The implemented data structures include:
 
 - **Doubly Linked List**
 - **Hash Tables (Linear Probing and Seperate Chaining)**
