@@ -29,7 +29,7 @@ A versatile cloud-based microservice designed to manage various data types, incl
 
 Node.js web app for online meal-kit purchases, powered by Express and MongoDB. Utilizes Handlebars and Bootstrap for a responsive design, with JavaScript enhancing dynamic features for an intuitive user experience.
 
-### Restaurant App
+## Restaurant App
 
 Web app showcases skilled frontend development with React and Express. The backend interacts with a MongoDB database via an API, dynamically driving the frontend to visualize diverse restaurant data with engaging graphical representations
 
